@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="40c3c462-06a8-4441-80f2-f25570b624a1" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+	<flow name="samplejenprjFlow" doc:id="cda6f7b1-cf74-497a-a599-6e06fa761e6b" >
+		<http:listener doc:name="Listener" doc:id="12cbb496-2dcf-4f1f-924b-5bf47d6c1976" config-ref="HTTP_Listener_config" path="/samplejenprj"/>
+		<set-payload value="testing jenkins based deployment" doc:name="Set Payload" doc:id="0e172d85-a764-4f1a-87be-652217b4edc7" />
+	</flow>
+</mule>
