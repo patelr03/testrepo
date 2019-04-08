@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="samplejenprjFlow" doc:id="cda6f7b1-cf74-497a-a599-6e06fa761e6b" >
 		<http:listener doc:name="Listener" doc:id="12cbb496-2dcf-4f1f-924b-5bf47d6c1976" config-ref="HTTP_Listener_config" path="/samplejenprj"/>
-		<set-payload value="testing jenkins based deployment for mule with changes" doc:name="Set Payload" doc:id="0e172d85-a764-4f1a-87be-652217b4edc7" />
+		<set-payload value="testing jenkins based deployment for mule with changes done" doc:name="Set Payload" doc:id="0e172d85-a764-4f1a-87be-652217b4edc7" />
 	</flow>
 </mule>
